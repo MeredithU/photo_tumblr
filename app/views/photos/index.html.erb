@@ -1,0 +1,19 @@
+<h2>A Tumblr of Photos</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Image</th>
+  </tr>
+
+<% @photos.each do |post| %>
+  <tr>
+    <td><%= post.name %></td>
+    <td><%= post.description %></td>
+    <td><%= post.image %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to "New Photo", new_photo_path %>
