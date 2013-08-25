@@ -8,6 +8,10 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'rmagick'
 gem 'carrierwave'
+gem 'fog'
+gem 'figaro'
+gem 'carrierwave_direct'
+gem 'sidekiq'
 
 
 # Gems used only for assets and not required
