@@ -11,10 +11,14 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.create(params[:photo])
     if @photo.save
-      render :action => "index"
+      render :action => "show"
     else
       #TBD
     end
+  end
+
+  def show
+    @photo = Photo.find(params[:id])
   end
 
 end

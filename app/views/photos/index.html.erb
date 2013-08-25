@@ -7,11 +7,11 @@
     <th>Image</th>
   </tr>
 
-<% @photos.each do |post| %>
+<% @photos.each do |f| %>
   <tr>
-    <td><%= post.name %></td>
-    <td><%= post.description %></td>
-    <td><%= post.image %></td>
+    <td><%= f.name %></td>
+    <td><%= f.description %></td>
+    <td><%= image_tag f.image_url(:thumb).to_s %></td>
   </tr>
 <% end %>
 </table>
