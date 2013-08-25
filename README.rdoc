@@ -1,0 +1,3 @@
+== A Tumblr Full of Photos
+
+This app uses CarrierWave to upload files and AWS S3 to store them.
