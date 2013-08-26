@@ -1,3 +1,23 @@
 == A Tumblr Full of Photos
 
 This app uses CarrierWave, Sidekiq and Redis to upload files and AWS S3 to store them.
+
+== To Set Up
+
+1) Ensure you have Postgres installed on your machine
+
+2) bundle install
+
+3) rake db:create
+
+4) rake db:migrate
+
+5) bundle exec redis
+
+6) bundle exec sidekiq
+
+7) rails s
+
+8) Have fun!
+
+You can find the app on Heroku: http://photo-tumblr.herokuapp.com/
