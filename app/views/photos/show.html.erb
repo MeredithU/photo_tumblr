@@ -1,3 +1,9 @@
-<h2>@photo.name</h2>
+<h2><%= @photo.name %></h2>
+<p><%= @photo.description %></p>
+<p><%= image_tag @photo.image_url(:thumb).to_s %></p>
+
+<%= link_to "Home", photos_path %>
+<%= link_to "Edit", edit_photo_path(@photo) %>
+<%= link_to "Delete", photo_path(@photo), :method => :delete, :confirm => "Are you sure you want to delete this project?" %>
 
 

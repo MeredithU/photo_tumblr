@@ -13,9 +13,9 @@ class PhotosController < ApplicationController
   def create
     @photo = Photo.create(params[:photo])
     if @photo.save
-      redirect_to @photo
+      redirect_to photos_url
     else
-      #TBD
+      render :new
     end
   end
 
@@ -23,4 +23,40 @@ class PhotosController < ApplicationController
     @photo = Photo.find(params[:id])
   end
 
+  def edit
+    @photo = Photo.find(params[:id])
+  end
+
+  def update
+    @photo = Photo.find(params[:id])
+
+    if @photo.update_attributes(params[:photo])
+      redirect_to photos_url
+    else
+      render :action => "edit"
+    end
+  end
+
+  def destroy
+    @photo = Photo.find(params[:id])
+    @photo.destroy
+    redirect_to photos_path
+  end
+
+
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
